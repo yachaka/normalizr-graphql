@@ -6,9 +6,10 @@
   "version": "0.1.0",
   "main": "lib/index.js",
   "scripts": {
+    "postinstall": "npm run build",
     "update-schema": "babel-node test/scripts/updateSchema",
     "test": "mocha --compilers js:babel-register",
-    "build": "babel src --out-dir lib/",
+    "build": "babel-node ./node_modules/.bin/babel src --out-dir lib/",
     "start": "babel-node index.js"
   },
   "dependencies": {
