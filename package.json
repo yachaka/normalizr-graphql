@@ -9,7 +9,7 @@
     "postinstall": "npm run build",
     "update-schema": "babel-node test/scripts/updateSchema",
     "test": "mocha --compilers js:babel-register",
-    "build": "babel-node ./node_modules/.bin/babel src --out-dir lib/",
+    "build": "babel-node ../.bin/babel src --out-dir lib/",
     "start": "babel-node index.js"
   },
   "dependencies": {
